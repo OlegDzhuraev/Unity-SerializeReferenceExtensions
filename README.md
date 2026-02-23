@@ -1,9 +1,10 @@
 ﻿# Unity SerializeReferenceExtensions
 
-[![Tests](https://github.com/mackysoft/Unity-SerializeReferenceExtensions/actions/workflows/tests.yaml/badge.svg)](https://github.com/mackysoft/Unity-SerializeReferenceExtensions/actions/workflows/tests.yaml) [![Build](https://github.com/mackysoft/Unity-SerializeReferenceExtensions/actions/workflows/build.yaml/badge.svg)](https://github.com/mackysoft/Unity-SerializeReferenceExtensions/actions/workflows/build.yaml) [![Release](https://img.shields.io/github/v/release/mackysoft/Unity-SerializeReferenceExtensions)](https://github.com/mackysoft/Unity-SerializeReferenceExtensions/releases) [![openupm](https://img.shields.io/npm/v/com.mackysoft.serializereference-extensions?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.mackysoft.serializereference-extensions/)
-
 This library provides an Inspector dropdown (`SubclassSelector`) for fields serialized by Unity's `[SerializeReference]`.
 
+Original repository: https://github.com/mackysoft/Unity-SerializeReferenceExtensions
+Original Author: Hiroya Aramaki (MIT License).
+**This repository version is highly modified with my ideas and code style.**
 
 ![SubclassSelector](https://user-images.githubusercontent.com/13536348/118233552-03cd1780-b4cd-11eb-9e5b-4824e8f01f1d.gif)
 
@@ -24,9 +25,7 @@ This library provides an Inspector dropdown (`SubclassSelector`) for fields seri
 - Supports variance matching (`in`/`out`) for generic interfaces (covariance / contravariance)
 
 ## Requirements
-
-- **Unity 2021.3 LTS or later** (officially supported).
-- **Unity 2023.2 or later** is recommended when you use **generic field types** (see “Generic support” below).
+- **Unity 2023.2 or later**.
 
 > See below for the reason for the limitation of versions less than Unity 2021.3.
 > https://blog.unity.com/engine-platform/serializereference-improvements-in-unity-2021-lts
@@ -36,31 +35,24 @@ This library provides an Inspector dropdown (`SubclassSelector`) for fields seri
 #### Install via `.unitypackage`
 
 Download any version from releases.
-https://github.com/mackysoft/Unity-SerializeReferenceExtensions/releases
+https://github.com/OlegDzuraev/Unity-SerializeReferenceExtensions/releases
 
 #### Install via git URL
 
 Open Package Manager → “Add package from git URL…”, then input:
 
 ```
-https://github.com/mackysoft/Unity-SerializeReferenceExtensions.git?path=Assets/MackySoft/MackySoft.SerializeReferenceExtensions
+https://github.com/OlegDzhuraev/Unity-SerializeReferenceExtensions.git?path=Assets/InsaneOne/InsaneOne.SerializeReferenceExtensions
 ```
 
 To pin a version, append `#{VERSION}`:
 
 ```
-https://github.com/mackysoft/Unity-SerializeReferenceExtensions.git?path=Assets/MackySoft/MackySoft.SerializeReferenceExtensions#1.7.0
+https://github.com/OlegDzhuraev/Unity-SerializeReferenceExtensions.git?path=Assets/InsaneOne/InsaneOne.SerializeReferenceExtensions#1.7.0
 ```
 
 #### Install via Open UPM
-
-Or, you can install this package from the [Open UPM](https://openupm.com/packages/com.mackysoft.serializereference-extensions/) registry.
-
-More details [here](https://openupm.com/).
-
-```
-openupm add com.mackysoft.serializereference-extensions
-```
+Available only for original package.
 
 ## 🔰 Usage
 
@@ -217,13 +209,6 @@ To solve this problem, `UnityEngine.Scripting.APIUpdating.MovedFromAttribute` ca
 Also, [this thread](https://forum.unity.com/threads/serializereference-data-loss-when-class-name-is-changed.736874/) will be helpful.
 
 #### References
+- https://github.com/mackysoft/Unity-SerializeReferenceExtensions
 - https://forum.unity.com/threads/serializereference-data-loss-when-class-name-is-changed.736874/
 - https://issuetracker.unity3d.com/issues/serializereference-serialized-reference-data-lost-when-the-class-name-is-refactored
-
-# <a id="help-and-contribute" href="#help-and-contribute"> ✉ Help & Contribute </a>
-
-I welcome feature requests and bug reports in [issues](https://github.com/mackysoft/XPool/issues) and [pull requests](https://github.com/mackysoft/XPool/pulls).
-
-If you feel that my works are worthwhile, I would greatly appreciate it if you could sponsor me.
-
-GitHub Sponsors: https://github.com/sponsors/mackysoft

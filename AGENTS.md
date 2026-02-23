@@ -7,21 +7,20 @@ to pick concrete implementations of interfaces / abstract types in the Inspector
 Primary risk area: type discovery & filtering (what types appear in the selector).
 
 ## Repository layout
-- Repository URL: `https://github.com/mackysoft/Unity-SerializeReferenceExtensions`
-- Package source: `Assets/MackySoft/MackySoft.SerializeReferenceExtensions`
+- Repository URL: `https://github.com/OlegDzhuraev/Unity-SerializeReferenceExtensions`
+- Package source: `Assets/MackySoft/InsaneOne.SerializeReferenceExtensions`
 - Editor code: `.../Editor/**`
 - Tests: `.../Tests/**`
 
 ## Unity compatibility (critical)
 - Minimum supported Unity: 2021.3 (baseline for development/testing).
-- Unity 2023.2+ has enhanced generic type support (variance, etc.). Changes must not break 2021.3 behavior and guarded by `UNITY_2023_2_OR_NEWER`.
-
+- Unity 2023.2+ has enhanced generic[STATUS.md](STATUS.md) type support (variance, etc.). Changes must not break 2021.3 behavior and guarded by `UNITY_2023_2_OR_NEWER`.
+[STATUS.md](STATUS.md)
 ## CI (GitHub Actions)
 I use GameCI `unity-test-runner`.
 - Always run EditMode tests.
 - Run a Unity matrix that includes:
-  - 2021.3.x (minimum baseline)
-  - 2023.2+ (generic/variance feature gate)
+  - 2023.2+
 
 ## How to run tests locally
 ### EditMode
@@ -41,7 +40,7 @@ mkdir -p "$(dirname "$RESULT_XML")"
 ## Architecture guardrails
 - Runtime surface area should remain minimal (mainly attributes / data structures).
 - Editor implementation (PropertyDrawer/UI/type search) must stay under `Editor/`.
-- Avoid introducing UnityEditor references into Runtime assemblies.
+- Avoid introducing UnityEditor references into Runtime assemblies.[STATUS.md](STATUS.md)
 
 ## Coding conventions
 - Prefer `UnityEditor.TypeCache` for type discovery. Avoid full AppDomain scans unless necessary.

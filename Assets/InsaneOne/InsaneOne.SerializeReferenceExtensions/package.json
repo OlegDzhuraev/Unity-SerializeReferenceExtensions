@@ -1,0 +1,21 @@
+{
+	"name": "com.insaneone.serializereference-extensions",
+	"displayName": "SerializeReference Extensions",
+	"author": { "name": "InsaneOne", "url": "https://github.com/OlegDzhuraev" },
+	"version": "0.0.1",
+	"unity": "2021.3",
+	"description": "Provide popup to specify the type of the field serialized by the [SerializeReference] attribute in the inspector. Original author MackySoft https://github.com/mackysoft.",
+	"keywords": [ "SerializeReference", "Editor" ],
+	"license": "MIT",
+	"dependencies": {},
+    "documentationUrl": "https://github.com/OlegDzhuraev/Unity-SerializeReferenceExtensions",
+    "changelogUrl": "https://github.com/OlegDzhuraev/Unity-SerializeReferenceExtensions/releases",
+    "licensesUrl": "https://github.com/OlegDzhuraev/Unity-SerializeReferenceExtensions/blob/main/LICENSE",
+	"samples": [
+		{
+			"displayName": "Get Started",
+			"description": "",
+			"path": "Samples~/GetStarted"
+		}
+	]
+}
