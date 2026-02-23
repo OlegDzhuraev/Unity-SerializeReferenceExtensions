@@ -3,7 +3,9 @@
 This library provides an Inspector dropdown (`SubclassSelector`) for fields serialized by Unity's `[SerializeReference]`.
 
 Original repository: https://github.com/mackysoft/Unity-SerializeReferenceExtensions
+
 Original Author: Hiroya Aramaki (MIT License).
+
 **This repository version is highly modified with my ideas and code style.**
 
 ![SubclassSelector](https://user-images.githubusercontent.com/13536348/118233552-03cd1780-b4cd-11eb-9e5b-4824e8f01f1d.gif)
