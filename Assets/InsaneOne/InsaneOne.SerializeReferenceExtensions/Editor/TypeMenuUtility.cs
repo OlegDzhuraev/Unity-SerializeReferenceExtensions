@@ -14,12 +14,12 @@ namespace InsaneOne.SerializeReferenceExtensions.Editor
             return Attribute.GetCustomAttribute(type, typeof(AddTypeMenuAttribute)) as AddTypeMenuAttribute;
         }
 
-        public static string[] GetSplittedTypePath(Type type)
+        public static string[] GetSplitTypePath(Type type)
         {
             var typeMenu = GetAttribute(type);
 
             if (typeMenu != null)
-                return typeMenu.GetSplittedMenuName();
+                return typeMenu.GetSplitMenuName();
 
             Debug.Assert(type.FullName != null, "type.FullName != null");
 
@@ -43,6 +43,5 @@ namespace InsaneOne.SerializeReferenceExtensions.Editor
                 return GetAttribute(type)?.MenuName ?? type.Name;
             });
         }
-
     }
 }

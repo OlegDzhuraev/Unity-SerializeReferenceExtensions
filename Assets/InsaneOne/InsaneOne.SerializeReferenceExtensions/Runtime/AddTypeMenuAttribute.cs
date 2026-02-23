@@ -4,6 +4,8 @@
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Interface, AllowMultiple = false, Inherited = false)]
 public sealed class AddTypeMenuAttribute : Attribute
 {
+    static readonly char[] Separators = { '/' };
+
     public string MenuName { get; }
     public int Order { get; }
 
@@ -13,18 +15,16 @@ public sealed class AddTypeMenuAttribute : Attribute
         Order = order;
     }
 
-    static readonly char[] Separeters = { '/' };
-
     /// <summary> Returns the menu name split by the '/' separator. </summary>
-    public string[] GetSplittedMenuName()
+    public string[] GetSplitMenuName()
     {
-        return !string.IsNullOrWhiteSpace(MenuName) ? MenuName.Split(Separeters, StringSplitOptions.RemoveEmptyEntries) : Array.Empty<string>();
+        return !string.IsNullOrWhiteSpace(MenuName) ? MenuName.Split(Separators, StringSplitOptions.RemoveEmptyEntries) : Array.Empty<string>();
     }
 
     /// <summary> Returns the display name without the path. </summary>
     public string GetTypeNameWithoutPath()
     {
-        var splittedDisplayName = GetSplittedMenuName();
-        return splittedDisplayName.Length != 0 ? splittedDisplayName[^1] : null;
+        var splitDisplayName = GetSplitMenuName();
+        return splitDisplayName.Length != 0 ? splitDisplayName[^1] : null;
     }
 }

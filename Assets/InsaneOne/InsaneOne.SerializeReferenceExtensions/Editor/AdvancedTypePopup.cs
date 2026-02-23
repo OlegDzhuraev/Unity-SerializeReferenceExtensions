@@ -39,7 +39,7 @@ namespace InsaneOne.SerializeReferenceExtensions.Editor
             var namespaces = new string[MaxNamespaceNestCount];
             foreach (var type in typeArray)
             {
-                var splittedTypePath = TypeMenuUtility.GetSplittedTypePath(type);
+                var splittedTypePath = TypeMenuUtility.GetSplitTypePath(type);
                 if (splittedTypePath.Length <= 1)
                     continue;
 
@@ -70,7 +70,7 @@ namespace InsaneOne.SerializeReferenceExtensions.Editor
             // Add type items.
             foreach (var type in typeArray)
             {
-                var splittedTypePath = TypeMenuUtility.GetSplittedTypePath(type);
+                var splittedTypePath = TypeMenuUtility.GetSplitTypePath(type);
                 if (splittedTypePath.Length == 0)
                     continue;
 

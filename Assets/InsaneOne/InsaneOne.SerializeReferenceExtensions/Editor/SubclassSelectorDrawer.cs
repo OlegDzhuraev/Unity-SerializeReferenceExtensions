@@ -54,7 +54,6 @@ namespace InsaneOne.SerializeReferenceExtensions.Editor
                         label.text = managedReferenceValue.ToString();
                 }
 #endif
-
                 // Draw the subclass selector popup.
                 if (EditorGUI.DropdownButton(popupPosition, GetTypeName(property), FocusType.Keyboard))
                 {

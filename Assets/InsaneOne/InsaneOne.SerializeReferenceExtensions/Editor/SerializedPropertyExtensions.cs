@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEditor;
 
 namespace InsaneOne.SerializeReferenceExtensions.Editor
@@ -11,6 +12,7 @@ namespace InsaneOne.SerializeReferenceExtensions.Editor
 
             var depthOfParent = parent.depth;
             var enumerator = parent.GetEnumerator();
+            using var disposable = enumerator as IDisposable;
 
             while (enumerator.MoveNext())
             {
