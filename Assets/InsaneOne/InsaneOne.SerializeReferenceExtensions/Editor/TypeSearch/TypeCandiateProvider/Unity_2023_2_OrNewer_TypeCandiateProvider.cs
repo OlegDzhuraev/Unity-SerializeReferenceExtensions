@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace MackySoft.SerializeReferenceExtensions.Editor
+namespace InsaneOne.SerializeReferenceExtensions.Editor
 {
     public sealed class Unity_2023_2_OrNewer_TypeCandiateProvider : ITypeCandiateProvider
     {
